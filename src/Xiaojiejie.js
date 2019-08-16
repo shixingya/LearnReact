@@ -6,7 +6,7 @@ class Xiaojiejie extends Component {
         super(props)
         this.state = {
             inputValue: 'shixngya',
-            list: ['base mashaji', 'exper mashaji']
+            list: ['捶背', '推荐股票','还花呗','还房贷','拉活儿']
         }
     }
     render() {
@@ -23,16 +23,13 @@ class Xiaojiejie extends Component {
                         this.state.list.map((item, index) => {
                             // return <li>{item}</li>
                             return (
-                                // <li
-                                //     key={index + item}
-                                //     onClick={this.deleteItem.bind(this, index)}
-                                //     dangerouslySetInnerHTML={{ __html: item }}
-                                // >
-                                // </li>
-                                //<XiaojiejieItem />
                                 <XiaojiejieItem 
+                                avname="汪导"
                                 key={index+item}  
-                                content={item} />
+                                content={item}
+                                index={index} 
+                                deleteItem={this.deleteItem.bind(this)}
+                                />
                             )
                         })
                     }
@@ -60,7 +57,7 @@ class Xiaojiejie extends Component {
         // console.log(e.target.value);
         // this.state.inputValue=e.target.value;
         this.setState({
-            inputValue: e.target.value+e.target.index
+            inputValue: e.target.value
         })
     }
 }
