@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import XiaojiejieItem from './XiaojiejieItem' 
+import Boss from './Boss';
  
 class Xiaojiejie extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class Xiaojiejie extends Component {
     render() {
         return (
 
-            <div>
+            <div> 
+                <Boss/>
                 <label htmlFor="jspang">加入服务：</label>
     <input id="jspang" className="input" value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
     <button onClick={this.addList.bind(this)}> 增加服务 </button>
